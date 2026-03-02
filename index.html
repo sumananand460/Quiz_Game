@@ -7,45 +7,46 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- We have 3 main screens: start screen, quiz screen and result screen. We will show and hide these screens using js -->
     <div class="container">
-      <div class="screen active" id="start-screen">
+      <div class="screen active" id="start-screen"> <!-- This is the start screen that will be shown when the user first loads the page. We will hide this screen and show the quiz screen when the user clicks the start button -->
         <h1>Quiz Time!</h1>
         <p>Test your knowledge with these fun questions</p>
         <button id="start-btn">Start Quiz</button>
       </div>
-
+      <!-- Quiz screen will be shown when the user clicks the start button. We will populate the question and answer options using js -->
       <div class="screen" id="quiz-screen">
-        <div class="quiz-header">
+        <div class="quiz-header"> <!-- We will show the current question number and total questions, as well as the user's score in this header section -->
           <h2 id="question-text">Question goes here</h2>
           <div class="quiz-info">
             <p>
               Question <span id="current-question">1</span> of <span id="total-questions">5</span>
             </p>
-
+            <!-- We will update the score as the user answers questions -->
             <p>Score: <span id="score">0</span></p>
           </div>
         </div>
-
+        <!-- We will dynamically create answer buttons here using js -->
         <div id="answers-container" class="answers-container">
           <!-- Answer buttons will be insterted here from our js code later at some point -->
         </div>
-
+        <!-- We will show a progress bar to indicate how many questions the user has answered -->
         <div class="progress-bar">
-          <div id="progress" class="progress"></div>
+          <div id="progress" class="progress"></div> <!-- We will update the width of this progress bar as the user answers questions -->
         </div>
       </div>
-
+      <!-- Result screen will be shown after the user answers all questions. We will show the final score and a message based on the user's performance -->
       <div id="result-screen" class="screen">
         <h1>Quiz Results</h1>
         <div class="result-info">
-          <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
-
+          <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p> <!-- We will update the final score and max score using js -->
+          <!-- We will show a different message based on the user's performance. For example, if the user scores 5 out of 5, we can show "Perfect score! You're a quiz master!" If the user scores 3 out of 5, we can show "Good job! You have a solid understanding of the material." If the user scores 0 out of 5, we can show "Better luck next time! Keep studying and you'll improve!" -->
           <div id="result-message">Good job!</div>
         </div>
-        <button id="restart-btn">Restart Quiz</button>
+        <button id="restart-btn">Restart Quiz</button> <!-- We will allow the user to restart the quiz by clicking this button. We will reset all the variables and show the start screen again when this button is clicked -->
       </div>
     </div>
-
+    <!-- We will write our js code in a separate file called script.js and link it here -->
     <script src="script.js"></script>
   </body>
 </html>

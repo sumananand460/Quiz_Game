@@ -14,7 +14,7 @@ const resultMessage = document.getElementById("result-message");
 const restartButton = document.getElementById("restart-btn");
 const progressBar = document.getElementById("progress");
 
-const quizQuestions = [
+const quizQuestions = [ // We will create an array of quiz questions, each question will be an object with a question property and an answers property. The answers property will be an array of answer options, each option will be an object with a text property and a correct property that indicates whether the answer is correct or not.
   {
     question: "What is the capital of France?",
     answers: [
@@ -63,27 +63,27 @@ const quizQuestions = [
 ];
 
 // QUIZ STATE VARS
-let currentQuestionIndex = 0;
-let score = 0;
-let answersDisabled = false;
+let currentQuestionIndex = 0; // We will use this variable to keep track of the current question index in the quizQuestions array. We will increment this variable each time the user answers a question and we will use it to show the next question.
+let score = 0; // We will use this variable to keep track of the user's score. We will increment this variable each time the user selects a correct answer and we will display it on the quiz screen and the result screen.
+let answersDisabled = false; // We will use this variable to disable the answer buttons after the user selects an answer. This will prevent the user from changing their answer or selecting multiple answers for the same question.
 
-totalQuestionsSpan.textContent = quizQuestions.length;
-maxScoreSpan.textContent = quizQuestions.length;
+totalQuestionsSpan.textContent = quizQuestions.length; // We will set the total number of questions in the quiz by updating the text content of the totalQuestionsSpan element with the length of the quizQuestions array.
+maxScoreSpan.textContent = quizQuestions.length; // We will set the maximum score in the quiz by updating the text content of the maxScoreSpan element with the length of the quizQuestions array, since each question is worth 1 point.
 
 // event listeners
 startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
 
-function startQuiz() {
+function startQuiz() { 
   // reset vars
   currentQuestionIndex = 0;
   score = 0;
   scoreSpan.textContent = 0;
 
-  startScreen.classList.remove("active");
+  startScreen.classList.remove("active"); 
   quizScreen.classList.add("active");
 
-  showQuestion();
+  showQuestion(); 
 }
 
 function showQuestion() {

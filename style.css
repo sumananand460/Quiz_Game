@@ -5,7 +5,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* We will use a simple and clean design with a light background color and a card-like container for the quiz content. 
+We will also use some basic styling for the buttons and progress bar to make them visually appealing. */
 body {
   background: #f5efe6;
   display: flex;
@@ -17,13 +18,13 @@ body {
 }
 
 .container {
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background-color: white; /* We will use a white background for the quiz container to create a card-like effect */
+  border-radius: 1rem; /* We will round the corners of the container to make it look more modern and visually appealing */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* We will add a subtle shadow to the container to give it some depth and make it stand out from the background */
+  width: 100%; 
   max-width: 600px;
-  overflow: hidden;
-  position: relative;
+  overflow: hidden; 
+  position: relative; 
 }
 
 /* SCREENS */
